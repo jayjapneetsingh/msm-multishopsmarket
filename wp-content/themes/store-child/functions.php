@@ -17,7 +17,7 @@ function my_theme_enqueue_styles() {
 
 
 
-function themename_custom_logo_setup() {
+function msm_custom_logo() {
     $defaults = array(
         'height'               => 100,
         'width'                => 400,
@@ -30,15 +30,15 @@ function themename_custom_logo_setup() {
     add_theme_support( 'custom-logo', $defaults );
 }
  
-add_action( 'after_setup_theme', 'themename_custom_logo_setup' );
+add_action( 'after_setup_theme', 'msm_custom_logo' );
 
 
 // Register Nav Menus 
 
 function msm_nav_menus(){
     register_nav_menus(array(
-        'header-menu' =>__("Header Menu", 'salesvue_nav_menus'),
-        'login-menu' => __("Login Menu",'salesvue_nav_menus' ),
+        'header_menus' =>__("Header Menu", 'msm'),
+        'login_menus' => __("Login Menu",'msm' ),
         
             ) );
         
