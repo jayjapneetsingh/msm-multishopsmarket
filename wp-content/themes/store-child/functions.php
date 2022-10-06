@@ -72,7 +72,7 @@ class wcfm_vendor_categories extends WP_Widget
        <?php }
         echo '</ul>';
         
-        echo $args['after_widget'];
+        echo $args['after_widget']; 
     }
 
     // Widget Backend
