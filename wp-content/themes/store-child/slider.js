@@ -1,4 +1,4 @@
-// This is a slider JS
+
 
 // This is a hero slider 
 var swiper = new Swiper(".hero-slider", {
