@@ -66,7 +66,7 @@ function msm_nav_menus(){
 
 
 /*
-* This code is used for inherting the li and nav classes in nav menus use the wp_nav menus classes 
+      This code is used for inherting the li and nav classes in nav menus use the wp_nav menus classes 
 */
      
 function add_class_li($classes, $item, $args){
@@ -84,7 +84,7 @@ function add_class_li($classes, $item, $args){
   
 
 /*
-  This code is used for inherting anchor classes <a> tag classes 
+    This code is used for inherting anchor classes <a> tag classes 
 */
 
  function add_anchor_classes($attr,$item,$args){
@@ -98,7 +98,7 @@ function add_class_li($classes, $item, $args){
 
 
 /*
- This function enable woocomerce support for developers 
+    This function enable woocomerce support for developers 
 */
 
 
@@ -109,7 +109,7 @@ function add_class_li($classes, $item, $args){
 add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
 
 /*
-* This code is used for showing product when no post found on search bar
+     This code is used for showing product when no post found on search bar
 */
 
 
@@ -119,6 +119,11 @@ function show_products_on_no_products_found() {
 	echo do_shortcode( '[recent_products per_page="4"]' );
 }
 
+
+/*
+     This is a print_r code
+*/
+
 function pr($args,$args2 = false){
     echo"<pre>";
     print_r($args);
@@ -127,3 +132,49 @@ function pr($args,$args2 = false){
         die;
     }
 }
+
+
+
+
+
+/****hide fields****/
+
+add_filter('wcfm_marketplace_settings_fields_brand', 'wcfm_marketplace_settings_fields_general_custom2605', 50, 2 );
+add_filter('wcfm_marketplace_settings_fields_general', 'wcfm_marketplace_settings_fields_general_custom2605', 50, 2 );
+function wcfm_marketplace_settings_fields_general_custom2605($general_fields,$vendor_id) {
+		unset($general_fields['banner_type']);
+		unset($general_fields['banner_video']);
+		unset($general_fields['banner_slider']);
+		unset($general_fields['mobile_banner']);
+		unset($general_fields['list_banner_type']);
+		unset($general_fields['list_banner']);
+		unset($general_fields['list_banner_video']);	
+	return $general_fields;
+}
+/****save banner image to mobile and list banner mage****/
+
+
+add_action( 'wcfm_wcfmmp_settings_update','fn_wcfm_vendor_settings_custom_update_2605', 30, 2);
+add_action( 'wcfm_vendor_settings_update','fn_wcfm_vendor_settings_custom_update_2605', 30, 2);
+function fn_wcfm_vendor_settings_custom_update_2605($user_id, $wcfm_settings_form ){	
+	global $WCFM;
+	$wcfm_settings_form_data_new = array();
+	parse_str($_POST['wcfm_settings_form'], $wcfm_settings_form_data_new);	
+	$wcfm_settings_form_data_mobilelistdata = array();
+	
+
+	if( isset($wcfm_settings_form_data_new['banner']) ) {
+		if( !empty($wcfm_settings_form['banner']) ) {
+			$wcfm_settings_form_data_mobilelistdata['mobile_banner'] = $WCFM->wcfm_get_attachment_id($wcfm_settings_form_data_new['banner']);
+			$wcfm_settings_form_data_mobilelistdata['list_banner'] = $WCFM->wcfm_get_attachment_id($wcfm_settings_form_data_new['banner']);
+		} else {
+			$wcfm_settings_form_data_mobilelistdata['mobile_banner'] = '';
+			$wcfm_settings_form_data_mobilelistdata['list_banner'] = '';
+		}
+	}
+	
+	$wcfm_settings_form = array_merge( $wcfm_settings_form, $wcfm_settings_form_data_mobilelistdata );
+	update_user_meta( $user_id, 'wcfmmp_profile_settings', $wcfm_settings_form );
+}
+
+
