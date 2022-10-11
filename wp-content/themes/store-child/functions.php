@@ -118,3 +118,12 @@ function show_products_on_no_products_found() {
 	echo '<h2>' . __( 'You may be interested in…', 'domain' ) . '</h2>';
 	echo do_shortcode( '[recent_products per_page="4"]' );
 }
+
+function pr($args,$args2 = false){
+    echo"<pre>";
+    print_r($args);
+    echo"</pre>";
+    if($args ==true){
+        die;
+    }
+}
