@@ -16,4 +16,3 @@ var swiper = new Swiper(".firstSwiper", {
       prevEl: ".swiper-button-prev",
     },
   });
-  co

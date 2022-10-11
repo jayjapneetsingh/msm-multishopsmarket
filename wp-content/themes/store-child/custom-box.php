@@ -32,9 +32,10 @@ $outage_meta_fields = array(
 function show_system_outage() {
     global $outage_meta_fields, $post;
     // print_r($post);
-    echo '<input type="hidden" name="custom_meta_box_nonce" value="'.wp_create_nonce(basename(__FILE__)).'" />';
+    echo '<input type="hidden" name="custom_meta_box_nonce" value="'.wp_create_nonce(basename(__FILE__)).'" >';
     echo '<table class="form-table">';
         foreach ($outage_meta_fields as $field) {
+          
             $meta = get_post_meta($post->ID, $field['id'], true);
             echo '<tr>';
                 echo '<th><label for="'.$field['id'].'">'.$field['label'].'</label></th>';
@@ -42,7 +43,7 @@ function show_system_outage() {
                     switch($field['type']) {
 
                         case 'multiselect':  
-                            echo '<select  multiple="multiple" name="'.$field['id'].'" id="'.$field['id'].'">';  
+                            echo '<select  multiple="multiple" name="sysout_buildings[]" id="'.$field['id'].'">';  
                                foreach ($field['options'] as $option) {  
                                       echo '<option', $meta == $option['value'] ? ' selected="selected"' : '', ' value="'.$option['value'].'">'.$option['label'].'</option>';  }  
                                       echo '</select><br /><span class="description">'.$field['desc'].'</span>';  
@@ -54,8 +55,9 @@ function show_system_outage() {
         }
     echo '</table>';
 }
-
-
+  
+// echo "ahhlfdlhfhdhfoih";
+// print_r($_POST['sysout_buildings']);
 function save_custom_meta($post_id) {
     global $outage_meta_fields;
 
@@ -70,6 +72,7 @@ function save_custom_meta($post_id) {
     elseif (!current_user_can('edit_post', $post_id)) {
         return $post_id;
     }
+
 
     foreach ($outage_meta_fields as $field) {
         $old = get_post_meta($post_id, $field['id'], true);

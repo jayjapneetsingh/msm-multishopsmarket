@@ -22,6 +22,17 @@ function addMyScript() {
                       }
   add_action('wp_enqueue_scripts', 'addMyScript');
 
+  function my_acf_load_field( $field ) {
+    $categories=get_option('wcfmvm_registration_custom_fields');
+     foreach($categories as $category)
+    foreach(explode(' | ',$category['options']) as $shop_cat){
+        $field['choices'][$shop_cat]=$shop_cat;
+    }
+    return $field;
+  
+  }
+   add_filter('acf/load_field/type=select', 'my_acf_load_field');
+
 // $user_id=get_current_user_id();
 // $user=get_user_meta($user_id);
 // $shop_category=$user['store-category'][0];
