@@ -36,8 +36,9 @@ $usering = get_field('slider_carousel');
 
 <!-- // Varun Code -->
 <div class="custom-container">
-    <?php
+  <?php
 
+   
         $electrical_post_selector=get_field('electrical_post_selector');
 
 carausalGenerator($electrical_post_selector, 'Electrical');
@@ -72,12 +73,16 @@ function carausalGenerator($acf_field, $cat_name)
 
 <!-- Jay Code -->
 
+   
+  
+
+
+
+
+
     <a href="<?php the_permalink(); ?>" ><h3><?php echo $product_post->post_title ?></h3></a>
 
-  <?php
-    $price = get_post_meta(get_the_ID(), '_price', true); ?>
-            <p><?php echo wc_price($price); ?></p>
-    <?php
+ <?php
       $vendor_id = get_post_field('post_author');
 
       $vendor = get_userdata($vendor_id);
