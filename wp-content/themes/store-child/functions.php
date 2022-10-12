@@ -22,5 +22,6 @@ require_once 'inc/footer-sidebar.php';
 require_once 'inc/custom-functions.php';
 require_once 'inc/woocommerce-functions.php';
 require_once 'inc/wcfm-custom-functions.php';
+require_once "inc/acf-custom-functions.php";
 
 
