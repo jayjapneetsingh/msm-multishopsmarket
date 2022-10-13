@@ -1,0 +1,151 @@
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+body {
+    font-family: 'Poppins', 'sans-serif';
+    line-height: 1.5;
+    color: #000;
+    background: #fff;
+
+}
+
+/*==== Font-size css =====*/
+h1 {
+    font-size: 70px;
+    font-weight: 700;
+}
+
+h2,
+.h2 {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+h3,
+.h3 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+h4,
+.h4 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/*==== End =====*/
+
+
+/*==== button css =====*/
+.common-btn {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    font-size: 1rem;
+    border-radius: 10px;
+    transition: all 0.4s ease-in-out;
+}
+
+.btn-yellow {
+    background: $yellow;
+    color: $white;
+    padding: 0.6875rem 2.5rem;
+
+    &:hover {
+        color: $white;
+        background: $yellow-700;
+    }
+}
+
+.btn-red {
+    background: $red;
+    color: $white;
+    padding: 0.6875rem 2.625rem;
+
+    &:hover {
+        color: $white;
+        background: $red-700;
+    }
+}
+
+/*==== End =====*/
+/*==== button css =====*/
+.custom-container {
+    max-width: 1680px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+main {
+    min-height: calc(100vh - 78px);
+}
+
+ol,
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: $white;
+}
+
+.navbar_toggler {
+    span {
+        background: transparent !important;
+
+        &::before {
+            transform: translate(0, 0px) rotate(-45deg) !important;
+        }
+
+        &::after {
+            transform: translate(0, 0px) rotate(45deg) !important;
+        }
+    }
+}
+
+.header-bg {
+    background: $black-02;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+
+    &:hover {
+        color: initial !important;
+    }
+}
+
+.carousel-control-prev-icon {
+    background-image: url(/wp-content/themes/store-child/img/left-arrow.svg);
+    object-fit: contain;
+}
+
+.carousel-control-next-icon {
+    background-image: url(/wp-content/themes/store-child/img/right-arrow.svg);
+    object-fit: contain;
+}
+
+/*==== End =====*/

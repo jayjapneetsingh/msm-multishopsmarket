@@ -1,0 +1,19 @@
+{
+  "name": "msm",
+  "version": "1.0.0",
+  "description": "> This repository only contains `wp-content`, you need to download and configure rest of WordPress files.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss -o css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.rubico.tech/RubicoTech/msm-multishopsmarket-Wordpress.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^7.0.3"
+  }
+}

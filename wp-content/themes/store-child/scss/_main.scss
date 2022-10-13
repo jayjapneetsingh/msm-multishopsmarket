@@ -1,0 +1,27 @@
+/*==== main css =====*/
+/*==== hero-banner css =====*/
+.herobanner-section {
+
+    #herobanner-slider {
+        min-height: 1080px;
+
+        .carousel-inner {
+            position: relative;
+
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            background: transparent linear-gradient(120deg, #000000DB 0%, #00000094 100%) 0% 0% no-repeat;
+        }
+    }
+
+
+}
+
+/*==== END =====*/
+
+/*==== END =====*/
