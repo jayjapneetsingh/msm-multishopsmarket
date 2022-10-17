@@ -12,13 +12,13 @@ get_header();
             <div id="herobanner-slider" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="/wp-content/themes/msm/assets/img/hero-banner.png" class="d-block " alt="hero-banner">
+                        <img src="/wp-content/themes/store-child/assets/img/hero-banner.png" class="d-block " alt="hero-banner">
                     </div>
                     <div class="carousel-item">
-                        <img src="/wp-content/themes/msm/assets/img/hero-banner.png" class="d-block " alt="hero-banner">
+                        <img src="/wp-content/themes/store-child/assets/img/hero-banner.png" class="d-block " alt="hero-banner">
                     </div>
                     <div class="carousel-item">
-                        <img src="/wp-content/themes/msm/assets/img/hero-banner.png" class="d-block " alt="hero-banner">
+                        <img src="/wp-content/themes/store-child/assets/img/hero-banner.png" class="d-block " alt="hero-banner">
                     </div>
                     <div class="hero-content text-center">
                         <h1> Multishops Market</h1>
@@ -55,7 +55,7 @@ get_header();
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="/wp-content/themes/msm/assets/img/card.png" class="card-img-top" alt="shop-profile">
+                                <img src="/wp-content/themes/store-child/assets/img/card.png" class="card-img-top" alt="shop-profile">
                                 <div class="card-body">
                                     <h4>Cell Phone Universe</h4>
                                     <p>Shivalik Nagar, R Cluster, Haridwar</p>
@@ -64,7 +64,7 @@ get_header();
                         </div>
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="/wp-content/themes/msm/assets/img/card.png" class="card-img-top" alt="shop-profile">
+                                <img src="/wp-content/themes/store-child/assets/img/card.png" class="card-img-top" alt="shop-profile">
                                 <div class="card-body">
                                     <h4>Cell Phone Universe</h4>
                                     <p>Shivalik Nagar, R Cluster, Haridwar</p>
@@ -73,7 +73,7 @@ get_header();
                         </div>
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="/wp-content/themes/msm/assets/img/card.png" class="card-img-top" alt="shop-profile">
+                                <img src="/wp-content/themes/store-child/assets/img/card.png" class="card-img-top" alt="shop-profile">
                                 <div class="card-body">
                                     <h4>Cell Phone Universe</h4>
                                     <p>Shivalik Nagar, R Cluster, Haridwar</p>
@@ -82,7 +82,7 @@ get_header();
                         </div>
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="/wp-content/themes/msm/assets/img/card.png" class="card-img-top" alt="shop-profile">
+                                <img src="/wp-content/themes/store-child/assets/img/card.png" class="card-img-top" alt="shop-profile">
                                 <div class="card-body">
                                     <h4>Cell Phone Universe</h4>
                                     <p>Shivalik Nagar, R Cluster, Haridwar</p>
@@ -91,7 +91,7 @@ get_header();
                         </div>
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="/wp-content/themes/msm/assets/img/card.png" class="card-img-top" alt="shop-profile">
+                                <img src="/wp-content/themes/store-child/assets/img/card.png" class="card-img-top" alt="shop-profile">
                                 <div class="card-body">
                                     <h4>Cell Phone Universe</h4>
                                     <p>Shivalik Nagar, R Cluster, Haridwar</p>
@@ -100,7 +100,7 @@ get_header();
                         </div>
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="/wp-content/themes/msm/assets/img/card.png" class="card-img-top" alt="shop-profile">
+                                <img src="/wp-content/themes/store-child/assets/img/card.png" class="card-img-top" alt="shop-profile">
                                 <div class="card-body">
                                     <h4>Cell Phone Universe</h4>
                                     <p>Shivalik Nagar, R Cluster, Haridwar</p>
@@ -109,7 +109,7 @@ get_header();
                         </div>
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="/wp-content/themes/msm/assets/img/card.png" class="card-img-top" alt="shop-profile">
+                                <img src="/wp-content/themes/store-child/assets/img/card.png" class="card-img-top" alt="shop-profile">
                                 <div class="card-body">
                                     <h4>Cell Phone Universe</h4>
                                     <p>Shivalik Nagar, R Cluster, Haridwar</p>
@@ -118,7 +118,7 @@ get_header();
                         </div>
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="/wp-content/themes/msm/assets/img/card.png" class="card-img-top" alt="shop-profile">
+                                <img src="/wp-content/themes/store-child/assets/img/card.png" class="card-img-top" alt="shop-profile">
                                 <div class="card-body">
                                     <h4>Cell Phone Universe</h4>
                                     <p>Shivalik Nagar, R Cluster, Haridwar</p>
@@ -141,7 +141,7 @@ get_header();
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="/wp-content/themes/msm/assets/img/electronic-shops.png" class="card-img-top" alt="shop-profile">
+                                <img src="/wp-content/themes/store-child/assets/img/electronic-shops.png" class="card-img-top" alt="shop-profile">
                                 <div class="card-body">
                                     <h4>Cell Phone Universe</h4>
                                     <p>Shivalik Nagar, R Cluster, Haridwar</p>
@@ -150,7 +150,7 @@ get_header();
                         </div>
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="/wp-content/themes/msm/assets/img/electronic-shops.png" class="card-img-top" alt="shop-profile">
+                                <img src="/wp-content/themes/store-child/assets/img/electronic-shops.png" class="card-img-top" alt="shop-profile">
                                 <div class="card-body">
                                     <h4>Cell Phone Universe</h4>
                                     <p>Shivalik Nagar, R Cluster, Haridwar</p>
@@ -159,7 +159,7 @@ get_header();
                         </div>
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="/wp-content/themes/msm/assets/img/electronic-shops.png" class="card-img-top" alt="shop-profile">
+                                <img src="/wp-content/themes/store-child/assets/img/electronic-shops.png" class="card-img-top" alt="shop-profile">
                                 <div class="card-body">
                                     <h4>Cell Phone Universe</h4>
                                     <p>Shivalik Nagar, R Cluster, Haridwar</p>
@@ -168,7 +168,7 @@ get_header();
                         </div>
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="/wp-content/themes/msm/assets/img/electronic-shops.png" class="card-img-top" alt="shop-profile">
+                                <img src="/wp-content/themes/store-child/assets/img/electronic-shops.png" class="card-img-top" alt="shop-profile">
                                 <div class="card-body">
                                     <h4>Cell Phone Universe</h4>
                                     <p>Shivalik Nagar, R Cluster, Haridwar</p>
@@ -177,7 +177,7 @@ get_header();
                         </div>
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="/wp-content/themes/msm/assets/img/electronic-shops.png" class="card-img-top" alt="shop-profile">
+                                <img src="/wp-content/themes/store-child/assets/img/electronic-shops.png" class="card-img-top" alt="shop-profile">
                                 <div class="card-body">
                                     <h4>Cell Phone Universe</h4>
                                     <p>Shivalik Nagar, R Cluster, Haridwar</p>
@@ -186,7 +186,7 @@ get_header();
                         </div>
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="/wp-content/themes/msm/assets/img/electronic-shops.png" class="card-img-top" alt="shop-profile">
+                                <img src="/wp-content/themes/store-child/assets/img/electronic-shops.png" class="card-img-top" alt="shop-profile">
                                 <div class="card-body">
                                     <h4>Cell Phone Universe</h4>
                                     <p>Shivalik Nagar, R Cluster, Haridwar</p>
@@ -195,7 +195,7 @@ get_header();
                         </div>
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="/wp-content/themes/msm/assets/img/electronic-shops.png" class="card-img-top" alt="shop-profile">
+                                <img src="/wp-content/themes/store-child/assets/img/electronic-shops.png" class="card-img-top" alt="shop-profile">
                                 <div class="card-body">
                                     <h4>Cell Phone Universe</h4>
                                     <p>Shivalik Nagar, R Cluster, Haridwar</p>
@@ -204,7 +204,7 @@ get_header();
                         </div>
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="/wp-content/themes/msm/assets/img/electronic-shops.png" class="card-img-top" alt="shop-profile">
+                                <img src="/wp-content/themes/store-child/assets/img/electronic-shops.png" class="card-img-top" alt="shop-profile">
                                 <div class="card-body">
                                     <h4>Cell Phone Universe</h4>
                                     <p>Shivalik Nagar, R Cluster, Haridwar</p>
@@ -213,7 +213,7 @@ get_header();
                         </div>
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="/wp-content/themes/msm/assets/img/electronic-shops.png" class="card-img-top" alt="shop-profile">
+                                <img src="/wp-content/themes/store-child/assets/img/electronic-shops.png" class="card-img-top" alt="shop-profile">
                                 <div class="card-body">
                                     <h4>Cell Phone Universe</h4>
                                     <p>Shivalik Nagar, R Cluster, Haridwar</p>
@@ -235,7 +235,7 @@ get_header();
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="/wp-content/themes/msm/assets/img/electronic-shops.png" class="card-img-top" alt="shop-profile">
+                                <img src="/wp-content/themes/store-child/assets/img/electronic-shops.png" class="card-img-top" alt="shop-profile">
                                 <div class="card-body">
                                     <h4>Cell Phone Universe</h4>
                                     <p>Shivalik Nagar, R Cluster, Haridwar</p>
@@ -244,7 +244,7 @@ get_header();
                         </div>
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="/wp-content/themes/msm/assets/img/electronic-shops.png" class="card-img-top" alt="shop-profile">
+                                <img src="/wp-content/themes/store-child/assets/img/electronic-shops.png" class="card-img-top" alt="shop-profile">
                                 <div class="card-body">
                                     <h4>Cell Phone Universe</h4>
                                     <p>Shivalik Nagar, R Cluster, Haridwar</p>
@@ -253,7 +253,7 @@ get_header();
                         </div>
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="/wp-content/themes/msm/assets/img/electronic-shops.png" class="card-img-top" alt="shop-profile">
+                                <img src="/wp-content/themes/store-child/assets/img/electronic-shops.png" class="card-img-top" alt="shop-profile">
                                 <div class="card-body">
                                     <h4>Cell Phone Universe</h4>
                                     <p>Shivalik Nagar, R Cluster, Haridwar</p>
@@ -262,7 +262,7 @@ get_header();
                         </div>
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="/wp-content/themes/msm/assets/img/electronic-shops.png" class="card-img-top" alt="shop-profile">
+                                <img src="/wp-content/themes/store-child/assets/img/electronic-shops.png" class="card-img-top" alt="shop-profile">
                                 <div class="card-body">
                                     <h4>Cell Phone Universe</h4>
                                     <p>Shivalik Nagar, R Cluster, Haridwar</p>
@@ -271,7 +271,7 @@ get_header();
                         </div>
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="/wp-content/themes/msm/assets/img/electronic-shops.png" class="card-img-top" alt="shop-profile">
+                                <img src="/wp-content/themes/store-child/assets/img/electronic-shops.png" class="card-img-top" alt="shop-profile">
                                 <div class="card-body">
                                     <h4>Cell Phone Universe</h4>
                                     <p>Shivalik Nagar, R Cluster, Haridwar</p>
@@ -280,7 +280,7 @@ get_header();
                         </div>
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="/wp-content/themes/msm/assets/img/electronic-shops.png" class="card-img-top" alt="shop-profile">
+                                <img src="/wp-content/themes/store-child/assets/img/electronic-shops.png" class="card-img-top" alt="shop-profile">
                                 <div class="card-body">
                                     <h4>Cell Phone Universe</h4>
                                     <p>Shivalik Nagar, R Cluster, Haridwar</p>
@@ -289,7 +289,7 @@ get_header();
                         </div>
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="/wp-content/themes/msm/assets/img/electronic-shops.png" class="card-img-top" alt="shop-profile">
+                                <img src="/wp-content/themes/store-child/assets/img/electronic-shops.png" class="card-img-top" alt="shop-profile">
                                 <div class="card-body">
                                     <h4>Cell Phone Universe</h4>
                                     <p>Shivalik Nagar, R Cluster, Haridwar</p>
@@ -298,7 +298,7 @@ get_header();
                         </div>
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="/wp-content/themes/msm/assets/img/electronic-shops.png" class="card-img-top" alt="shop-profile">
+                                <img src="/wp-content/themes/store-child/assets/img/electronic-shops.png" class="card-img-top" alt="shop-profile">
                                 <div class="card-body">
                                     <h4>Cell Phone Universe</h4>
                                     <p>Shivalik Nagar, R Cluster, Haridwar</p>
@@ -307,7 +307,7 @@ get_header();
                         </div>
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="/wp-content/themes/msm/assets/img/electronic-shops.png" class="card-img-top" alt="shop-profile">
+                                <img src="/wp-content/themes/store-child/assets/img/electronic-shops.png" class="card-img-top" alt="shop-profile">
                                 <div class="card-body">
                                     <h4>Cell Phone Universe</h4>
                                     <p>Shivalik Nagar, R Cluster, Haridwar</p>
