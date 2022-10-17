@@ -1,0 +1,64 @@
+/*==== main css =====*/
+/*==== hero-banner css =====*/
+.herobanner-section {
+    position: relative;
+
+    #herobanner-slider {
+        min-height: 1080px;
+
+        .carousel-inner {
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                z-index: 1;
+                background: transparent linear-gradient(120deg, #000000DB 0%, #00000094 100%) 0% 0% no-repeat;
+            }
+        }
+    }
+
+    .hero-content {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 3;
+
+        &> :not(:last-child) {
+            margin-bottom: 1.125rem;
+        }
+
+        h1,
+        p {
+            color: $white;
+        }
+
+        h2 {
+            color: $yellow;
+            font-size: $medium;
+        }
+    }
+
+}
+
+/*==== END =====*/
+
+/*==== categories-section css =====*/
+.categories-section {
+    padding-top: 5.625rem;
+    padding-bottom: 7.875rem;
+
+    h2 {
+        color: $yellow;
+        margin-bottom: 1.4rem;
+    }
+
+}
+
+/*==== END =====*/
+
+
+/*==== END =====*/

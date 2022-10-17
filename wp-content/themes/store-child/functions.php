@@ -11,9 +11,6 @@ function my_theme_enqueue_styles() {
         array( $parenthandle ),
         $theme->get('Version') // this only works if you have Version in the style header
     );
-    // wp_enqueue_style('bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css', false, false, 'all');
-    wp_enqueue_script( 'bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js', array(),false, true );  
-    // wp_enqueue_script('jquery-cdn', 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js');
 }
 
 //single line comment

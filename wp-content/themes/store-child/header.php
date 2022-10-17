@@ -1,90 +1,81 @@
-<!DOCTYPE html>
+<?php
+/**
+* The header for our theme
+*
+* This is the template that displays all of the <head> section and everything up until <div id="content">
+*
+* @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+*
+* @package jay
+*/
+ 
+?>
+<!doctype html>
 <html <?php language_attributes(); ?>>
 
 <head>
-    <meta charset="<?php bloginfo( 'charset' ); ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="profile" href="https://gmpg.org/xfn/11">
+  <meta charset="<?php bloginfo( 'charset' ); ?>">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="profile" href="https://gmpg.org/xfn/11">
 
-    <?php wp_head(); ?>
-    <title>multishop market</title>
-
+  <?php wp_head(); ?>
 </head>
 
-<body>
-    <header>
-        <nav class="navbar navbar-expand-lg fixed-top">
-            <div class="container-fluid custom-container">
-                <a class="brand-logo" href="#"><img src="wp-content/themes/store-child/img/Group 3983.svg"
-                        alt="brand-logo"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+<body <?php body_class(); ?>>
 
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">about us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">store list</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">contact us</a>
-                        </li>
 
-                    </ul>
-                    <form class="d-flex me-auto">
-                        <input class="form-control me-2" type="search" placeholder="Search products and shops"
-                            aria-label="Search">
-                        <a href="#"><img src="wp-content/themes/store-child/img/Icon-search.svg" alt=search-logo"></a>
-                    </form>
+  <!-- <?php
+//         $custom_logo_id = get_theme_mod( 'custom_logo' );
+// $image = wp_get_attachment_image_src( $custom_logo_id , 'medium' );
+// // echo $image[0];
+?> -->
 
-                    <div class="btn-group">
-                        <a href="#" class="common-btn btn-red"> Login</a>
-                        <a href="#" class="common-btn btn-yellow "> Become a seller</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
+  <header>
+    <nav class="custom-navbar d-flex ">
+      <div class="container-fluid custom-container d-flex align-items-center">
+        <a class="navbar-brand" href="<?php echo esc_url( home_url('/')) ;?>"><img src="<?php echo $image[0];?>"></a>
+        <div class="collapse navbar-collapse show" id="navbarNav">
+          <div class="nav-menu d-flex align-items-center justify-content-evenly">
 
-    <main>
-        <div id="herobanner-slider" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="wp-content/themes/store-child/img/hero-banner.png" class="d-block " alt="hero-banner">
-                </div>
-                <div class="carousel-item">
-                    <img src="wp-content/themes/store-child/img/hero-banner.png" class="d-block " alt="hero-banner">
-                </div>
-                <div class="carousel-item">
-                    <img src="wp-content/themes/store-child/img/hero-banner.png" class="d-block " alt="hero-banner">
-                </div>
 
-                <div class="hero-content">
-                    <h1> </h1>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#herobanner-slider"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#herobanner-slider"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+            <?php 
+       
+      
+       $header_menu = array(
+     'theme_location'  => 'header_menu',
+     'menu_class' => 'navbar-nav d-flex align-items-center ms-0',
+     'li_class' => 'nav-item',
+     'a_class' => 'nav-link',
+     'active_class' => 'active',
+
+  );
+ wp_nav_menu($header_menu);
+?>
+            <form action="/" method="get" class="search-bar">
+              <div class="form-group">
+                <input type="text" name="s" id="search" placeholder="Search products"
+                  value="<?php the_search_query(); ?>" />
+                <img src="<?php echo get_stylesheet_directory_uri().'/Search.svg'?>" alt="">
+              </div>
+            </form>
+
+            <?php $login_menu = array(
+     'theme_location'  => 'login_menu',
+     'container'       => '',
+     'menu_class' => 'btn-menu m-0',
+     'li_class' => '',
+     'a_class' => 'nav-link',
+     'active_class' => 'active',
+     'container_class' => '',
+     'container_id'    => '',
+
+  );
+ wp_nav_menu($login_menu); 
+
+?>
+
+          </div>
         </div>
-
-        </section>
-    </main>
-</body>
-
-</html>
+      </div>
+    </nav>
+  </header>
