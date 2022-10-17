@@ -3,6 +3,7 @@
  * Enqueue scripts and styles.
  */
 function store_scripts() {
+
     wp_enqueue_style( 'store-style', get_stylesheet_uri() );
 
     wp_enqueue_style('store-title-font', '//fonts.googleapis.com/css?family='.str_replace(" ", "+", get_theme_mod('store_title_font', 'Lato') ).':100,300,400,700' );

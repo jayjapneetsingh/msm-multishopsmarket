@@ -1,0 +1,52 @@
+/*==== hero-banner css =====*/
+footer {
+    background: #FCCB7E 0% 0% no-repeat;
+
+    .footer-container {
+        padding-top: 4.4375rem;
+        padding-bottom: 4.0625rem;
+
+        .brand-footer {
+            max-width: 22.5625rem;
+
+            p {
+                font-size: $small;
+                font-weight: 300;
+            }
+        }
+
+
+        h3 {
+            font-size: $small;
+            font-weight: 500;
+        }
+
+        ul {
+            li {
+                &:not(:last-child) {
+                    margin-bottom: 1.125rem;
+                }
+            }
+
+            a {
+                font-size: $small;
+                color: $black;
+                font-weight: 300;
+            }
+        }
+    }
+
+
+    .bottom-footer {
+        padding-top: 2.4375rem;
+        padding-bottom: 2.4375rem;
+        border-top: 1px solid $black-02;
+
+        p {
+            color: $black-02;
+            font-size: 1.25rem;
+        }
+    }
+}
+
+/*==== End =====*/
