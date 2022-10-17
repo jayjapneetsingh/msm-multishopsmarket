@@ -83,12 +83,12 @@
     transition: all 0.4s ease;
     font-size: 16px;
 }
-.btn-black {
-    background-color: #000;
-}
-.btn-black:hover {
-    background-color: #CECECE;
-}
+/*.btn-black {*/
+/*    background-color: #000;*/
+/*}*/
+/*.btn-black:hover {*/
+/*    background-color: #CECECE;*/
+/*}*/
 header {
     background: #F5F5F5;
 }

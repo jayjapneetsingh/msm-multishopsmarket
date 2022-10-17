@@ -24,52 +24,67 @@
 <body <?php body_class(); ?>>
   <?php
    $custom_logo_id = get_theme_mod('custom_logo');
-$image = wp_get_attachment_image_src($custom_logo_id, 'medium');
+   $image = wp_get_attachment_image_src($custom_logo_id, 'medium');
 ?>
   <header>
-    <nav class="custom-navbar d-flex ">
-      <div class="container-fluid custom-container d-flex align-items-center">
-        <a class="navbar-brand" href="<?php echo esc_url(home_url('/')) ;?>"><img src="<?php echo $image[0];?>"></a>
-        <div class="collapse navbar-collapse show" id="navbarNav">
-          <div class="nav-menu d-flex align-items-center justify-content-evenly">
-            
-          <!--This is header nav menus -->
+      <nav class="navbar navbar-expand-lg fixed-top">
+          <div class="container-fluid custom-container">
+              <a class="brand-logo" href="<?php echo esc_url(home_url('/')) ;?>"><img src="<?php echo $image[0];?>" alt="msm-logo"></a>
 
-            <?php
-              $header_menu = array(
-              'theme_location'  => 'header_menus',
-              'menu_class' => 'navbar-nav d-flex align-items-center ms-0',
-              'li_class' => 'nav-item',
-              'a_class' => 'nav-link',
-              'active_class' => 'active',
-              );
-              wp_nav_menu($header_menu);
-            ?>
-            <!-- Header nav menus end -->
+              <form id="search-form" action="/" method="get" class="d-none d-sm-block d-lg-none">
+                  <input class="form-control me-2" type="search" name="s" placeholder="Search products and shops"
+                         aria-label="Search">
+                  <a id="search-form-submit" onclick="searchsubmit(); return false;" href="#" ><img src="/wp-content/themes/msm/assets/img/Icon-search.svg" alt="search-logo&quot;"></a>
+              </form>
 
-            <!-- Search Bar -->
-            <form action="/" method="get" class="search-bar">
-              <div class="form-group">
-                <input type="text" name="s" id="search" placeholder="Search products"
-                  value="<?php the_search_query(); ?>" />
-                <img src="<?php echo get_stylesheet_directory_uri().'/Search.svg'?>" alt="">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                      aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                  <div class=" d-flex flex-column align-items-start flex-lg-row w-100">
+                      <ul class="navbar-nav me-auto mb-3 my-sm-3 my-lg-0 order-2 order-lg-0">
+                          <!--This is header nav menus -->
+
+                          <?php
+                          $header_menu = array(
+                              'theme_location'  => 'header_menus',
+                              'menu_class' => 'navbar-nav d-flex align-items-center ms-0',
+                              'li_class' => 'nav-item',
+                              'a_class' => 'nav-link',
+                              'active_class' => 'active',
+                          );
+                          wp_nav_menu($header_menu);
+                          ?>
+                          <!-- Header nav menus end -->
+                      </ul>
+
+                      <!-- Search Bar -->
+                      <form id="search-form" action="/" method="get" class="d-flex me-auto my-3 my-lg-0 d-block d-sm-none d-lg-block order-1 order-lg-0">
+                          <div class="form-group">
+                              <input class="form-control me-2" type="search" name="s" placeholder="Search products and shops"
+                                     value="<?php the_search_query(); ?>" />
+                              <a href="#"  id="search-form-submit"><img src="/wp-content/themes/msm/assets/img/Icon-search.svg" alt="search-logo&quot;"></a>
+                          </div>
+                      </form>
+                      <!-- Search bar end  -->
+
+                      <div class="btn-group align-items-start align-items-sm-center flex-column flex-sm-row order-3 order-lg-0">
+                          <!-- This is a second nav menu called as Login menu -->
+                          <?php $login_menu = array(
+                              'theme_location'  => 'login_menus',
+                              'menu_class' => 'btn-menu m-0',
+                              'a_class' => 'common-btn btn-red mb-3 mb-sm-0 ',
+                              'active_class' => 'active',
+                          );
+                          wp_nav_menu($login_menu);
+                          ?>
+                      </div>
+                  </div>
               </div>
-            </form>
-            <!-- Search bar end  -->
-
-            <!-- This is a second nav menu called as Login menu -->
-            <?php $login_menu = array(
-             'theme_location'  => 'login_menus',
-              'menu_class' => 'btn-menu m-0',
-              'a_class' => 'nav-link',
-              'active_class' => 'active',
-              );
-              wp_nav_menu($login_menu);
-            ?>
-
           </div>
-        </div>
-      </div>
-    </nav>
+      </nav>
   </header>
+  <!-- header-ends here -->
   <!-- Header end -->
