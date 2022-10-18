@@ -8388,6 +8388,7 @@ textarea.form-control-lg {
 
 body, h1, .h1, h2, .h2, h3, .h3, h4, .h4,
 p,
+ul,
 figure,
 blockquote,
 dl,
@@ -8403,7 +8404,7 @@ body {
 /*==== Font-size css =====*/
 h1, .h1 {
   font-size: 70px;
-  font-weight: 700; }
+  font-weight: 500; }
 
 h2, .h2,
 .h2 {
@@ -8489,6 +8490,27 @@ a {
 .header-bg {
   background: #00000080; }
 
+.nav-bg {
+  transition: all 300ms ease; }
+  .nav-bg::before {
+    content: '';
+    background: white;
+    position: absolute;
+    transition: all ease-in-out .1s;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; }
+  .nav-bg ul a {
+    color: #000 !important; }
+  .nav-bg .navbar-toggler span {
+    background: black; }
+    .nav-bg .navbar-toggler span::after {
+      background: black; }
+    .nav-bg .navbar-toggler span::before {
+      background: black; }
+
 .carousel-control-prev:hover,
 .carousel-control-next:hover {
   color: initial !important; }
@@ -8552,13 +8574,13 @@ a {
 .card {
   border: 1px solid #F7463F;
   border-radius: 10px;
-  transition: all 0.3s ease; }
+  transition: all 300ms ease; }
   .card .card-body {
     padding-top: 24px;
     padding-bottom: 24px;
     background: #fff;
     color: #000;
-    transition: all 0.3s ease;
+    transition: all 300ms ease;
     border-radius: 0px 0px 10px 10px; }
     .card .card-body:hover {
       background: #000;
@@ -8581,7 +8603,7 @@ header ul .nav-link {
   color: #fff;
   font-size: 1rem;
   font-weight: 500;
-  transition: all 0.4s ease-in-out; }
+  transition: all 400ms ease-in-out; }
   header ul .nav-link:hover {
     color: #fff;
     text-decoration: underline;
@@ -8690,8 +8712,14 @@ footer {
 
 /*==== End =====*/
 @media (min-width: 1400px) {
-  header nav .btn-group .common-btn:not(:first-child) {
+  header nav .btn-group li:not(:first-child) {
     margin-left: 2.75rem !important; } }
+
+@media (max-width: 767.98px) {
+  .btn-yellow {
+    padding: 0.6rem 0.8rem !important; }
+  .btn-red {
+    padding: 0.6rem 1.5rem !important; } }
 
 @media (max-width: 991px) {
   .header-bg {
@@ -8711,12 +8739,12 @@ footer {
       font-size: 1rem; } }
 
 @media (max-width: 1199px) {
+  .btn-group .btn-yellow {
+    padding: 0.7rem 0.9rem; }
   header nav form {
     max-width: 13rem; }
   header ul .nav-item {
     margin-left: 0.5rem !important; }
-  header .btn-group .btn-yellow {
-    padding: 0.7rem 0.9rem; }
   header .navbar-toggler {
     width: 50px;
     height: 50px;
@@ -8729,19 +8757,20 @@ footer {
       width: 100%;
       height: 2px;
       background: #fff;
-      position: relative; }
+      position: relative;
+      transition: all 300ms ease;
+      z-index: 1; }
       header .navbar-toggler span::after, header .navbar-toggler span::before {
         content: '';
         position: absolute;
         width: 100%;
         height: 100%;
-        background: #fff; }
+        background: #fff;
+        transition: all 300ms ease; }
       header .navbar-toggler span::before {
-        transform: translateY(-10px);
-        transition: all 0.3s ease; }
+        transform: translateY(-10px); }
       header .navbar-toggler span::after {
-        transform: translateY(10px);
-        transition: all 0.3s ease; } }
+        transform: translateY(10px); } }
 
 @media (max-width: 1399px) {
   header .brand-logo img {

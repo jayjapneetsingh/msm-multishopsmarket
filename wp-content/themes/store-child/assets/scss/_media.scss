@@ -2,11 +2,10 @@
     header {
         nav {
             .btn-group {
-                .common-btn {
-                    &:not(:first-child) {
-                        margin-left: 2.75rem !important;
-                    }
+                li:not(:first-child) {
+                    margin-left: 2.75rem !important;
                 }
+
             }
         }
     }
@@ -14,7 +13,16 @@
 
 // @media (max-width: 575.98px) { ... }
 
-// @media (max-width: 767.98px) { ... }
+@media (max-width: 767.98px) {
+
+    .btn-yellow {
+        padding: 0.6rem 0.8rem !important;
+    }
+
+    .btn-red {
+        padding: 0.6rem 1.5rem !important;
+    }
+}
 
 
 @media (max-width: 991px) {
@@ -22,15 +30,16 @@
     .header-bg {
         background: $black-02;
     }
-        header {
-            nav {
-                form {
-                    max-width: 20rem !important;
-                }
+
+    header {
+        nav {
+            form {
+                max-width: 20rem !important;
             }
         }
+    }
 
-    
+
 
     footer {
         .footer-container {
@@ -38,11 +47,6 @@
             padding-bottom: 2.0625rem !important;
 
             .footer-item {
-                // h3 {
-                //     margin-top: 1.75rem;
-                //     margin-bottom: 1.75rem;
-                // }
-
                 ul {
                     li {
                         &:not(:last-child) {
@@ -69,6 +73,12 @@
 
 
 @media (max-width: 1199px) {
+    .btn-group {
+        .btn-yellow {
+            padding: 0.7rem 0.9rem;
+        }
+    }
+
     header {
         nav {
             form {
@@ -82,19 +92,13 @@
             }
         }
 
-        .btn-group {
-            .btn-yellow {
-                padding: 0.7rem 0.9rem;
-            }
-        }
-
         .navbar-toggler {
             width: 50px;
             height: 50px;
             cursor: pointer;
             outline: none;
             border: none;
-
+ 
             &:focus {
                 box-shadow: none;
             }
@@ -104,7 +108,8 @@
                 height: 2px;
                 background: #fff;
                 position: relative;
-
+                transition: all 300ms ease;
+                z-index: 1;
 
                 &::after,
                 &::before {
@@ -113,16 +118,15 @@
                     width: 100%;
                     height: 100%;
                     background: #fff;
+                    transition: all 300ms ease;
                 }
 
                 &::before {
                     transform: translateY(-10px);
-                    transition: all 0.3s ease;
                 }
 
                 &::after {
                     transform: translateY(10px);
-                    transition: all 0.3s ease;
                 }
             }
 

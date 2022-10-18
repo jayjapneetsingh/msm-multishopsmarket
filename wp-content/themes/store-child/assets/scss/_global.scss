@@ -4,6 +4,7 @@ h2,
 h3,
 h4,
 p,
+ul,
 figure,
 blockquote,
 dl,
@@ -22,7 +23,7 @@ body {
 /*==== Font-size css =====*/
 h1 {
     font-size: 70px;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 h2,
@@ -135,6 +136,43 @@ a {
     background: $black-02;
 }
 
+.nav-bg {
+    transition: all 300ms ease;
+    &::before {
+        content: '';
+        background: white;
+        position: absolute;
+        transition: all ease-in-out .1s;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    ul {
+        a {
+            color: $black !important;
+        }
+    }
+
+    .navbar-toggler{
+        span {
+            background: black;
+            &::after{
+                background: black;
+            }
+            &::before{
+                background: black;
+            }
+
+        }
+    }
+
+}
+
+
+
 .carousel-control-prev,
 .carousel-control-next {
 
@@ -213,14 +251,14 @@ a {
 .card {
     border: 1px solid $red;
     border-radius: 10px;
-    transition: all 0.3s ease;
+    transition: all 300ms ease;
 
     .card-body {
         padding-top: 24px;
         padding-bottom: 24px;
         background: $white;
         color: $black;
-        transition: all 0.3s ease;
+        transition: all 300ms ease;
         border-radius: 0px 0px 10px 10px;
 
         &:hover {

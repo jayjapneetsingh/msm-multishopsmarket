@@ -1,5 +1,6 @@
 /*==== Header css =====*/
 header {
+
     .brand-logo {
         display: inline-block;
 
@@ -18,7 +19,7 @@ header {
             color: $white;
             font-size: $small;
             font-weight: 500;
-            transition: all 0.4s ease-in-out;
+            transition: all 400ms ease-in-out;
 
             &:hover {
                 color: $white;
