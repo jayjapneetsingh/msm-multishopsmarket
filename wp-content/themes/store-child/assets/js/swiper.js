@@ -1,4 +1,4 @@
-alert('hii');
+
 var swiper = new Swiper(".firstSwiper", {
    
     navigation: {
