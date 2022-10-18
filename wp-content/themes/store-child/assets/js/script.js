@@ -6,14 +6,14 @@ hamMenu.addEventListener('click', () => {
 });
 
 
-
 const swiper = new Swiper('.mySwiper', {
     slidesPerView: 1,
     spaceBetween: 10,
     slidesPerGroup: 1,
-    loop: true,
-    loopFillGroupWithBlank: true,
+    // loop: true,
+    // loopFillGroupWithBlank: true,
     // Responsive breakpoints
+
     breakpoints: {
         // when window width is >= 480px
         576: {
@@ -30,6 +30,7 @@ const swiper = new Swiper('.mySwiper', {
             spaceBetween: 40
         }
     },
+
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
