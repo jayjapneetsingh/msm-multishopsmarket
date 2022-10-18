@@ -81,7 +81,9 @@ composer.phar
 /wp-content/themes/twentytwentytwo
 /wp-content/themes/twentytwenty
 /wp-content/mu-plugins
-/wp-content/plugins
+/wp-content/plugins/
+/wp-content/plugins/wordpress-importer
+/wp-content/plugins/shop-list-slider
 /wp-content/mailpoet
 /wp-content/ai1wm-backups
 /license.txt

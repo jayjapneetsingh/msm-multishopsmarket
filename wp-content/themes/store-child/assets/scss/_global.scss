@@ -1,0 +1,237 @@
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+body {
+    font-family: 'Poppins', 'sans-serif';
+    line-height: 1.5;
+    color: #000;
+    background: #fff;
+
+}
+
+/*==== Font-size css =====*/
+h1 {
+    font-size: 70px;
+    font-weight: 700;
+}
+
+h2,
+.h2 {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+h3,
+.h3 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+h4,
+.h4 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/*==== End =====*/
+
+
+/*==== button css =====*/
+.common-btn {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    font-size: 1rem;
+    border-radius: 10px;
+    transition: all 0.4s ease-in-out;
+}
+
+.btn-yellow {
+    background: $yellow;
+    color: $white;
+    padding: 0.6875rem 2.5rem;
+
+    &:hover {
+        color: $white;
+        background: $yellow-700;
+    }
+}
+
+.btn-sm {
+    padding: 0.6875rem 1.625rem !important;
+
+}
+
+.btn-red {
+    background: $red;
+    color: $white;
+    padding: 0.6875rem 2.625rem;
+
+    &:hover {
+        color: $white;
+        background: $red-700;
+    }
+}
+
+/*==== End =====*/
+/*==== button css =====*/
+.custom-container {
+    max-width: 1680px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+main {
+    min-height: calc(100vh - 78px);
+}
+
+ol,
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: $white;
+}
+
+.navbar_toggler {
+    span {
+        background: transparent !important;
+
+        &::before {
+            transform: translate(0, 0px) rotate(-45deg) !important;
+        }
+
+        &::after {
+            transform: translate(0, 0px) rotate(45deg) !important;
+        }
+    }
+}
+
+.header-bg {
+    background: $black-02;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+
+    &:hover {
+        color: initial !important;
+    }
+}
+
+.carousel-control-prev-icon {
+    background-image: url(/wp-content/themes/store-child//assets/img/left-arrow.svg);
+    object-fit: contain;
+}
+
+.carousel-control-next-icon {
+    background-image: url(/wp-content/themes/store-child/assets/img/right-arrow.svg);
+    object-fit: contain;
+}
+
+/*==== End =====*/
+
+/*==== Swiper Css =====*/
+.swiper {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 3.8125rem;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-button-next {
+    right: 1px;
+}
+
+.swiper-button-prev {
+    left: 5px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    background: $yellow;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+
+    &::after {
+        color: $black;
+        font-size: 1rem;
+    }
+}
+
+.card {
+    border: 1px solid $red;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+
+    .card-body {
+        padding-top: 24px;
+        padding-bottom: 24px;
+        background: $white;
+        color: $black;
+        transition: all 0.3s ease;
+        border-radius: 0px 0px 10px 10px;
+
+        &:hover {
+            background: $black;
+            color: $white;
+        }
+
+        p {
+            font-size: 0.875rem;
+        }
+    }
+}
+
+/*==== End =====*/
