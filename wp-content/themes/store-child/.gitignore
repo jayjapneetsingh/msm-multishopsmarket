@@ -70,7 +70,7 @@ composer.phar
 # Project related
 /wp-admin/
 /wp-includes/
-/*.php
+# /*.php
 /license.txt
 /readme.html
 /wp-content/uploads
