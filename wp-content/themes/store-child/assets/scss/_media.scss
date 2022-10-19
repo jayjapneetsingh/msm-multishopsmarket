@@ -2,7 +2,7 @@
     header {
         nav {
             .btn-menu {
-                .common-btn {
+                li {
                     &:not(:first-child) {
                         margin-left: 2.75rem !important;
                     }
