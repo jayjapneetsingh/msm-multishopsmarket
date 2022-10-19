@@ -73,11 +73,9 @@ $shops = $meta_shops[0];
         <?php foreach ($meta_cat as $cat) : ?>
 
             <div class=" categories-container">
-
                 <div class="d-flex justify-content-between align-items-center mb-5">
-
                     <h3><?php echo $cat ?></h3>
-                    <a href="#" class="common-btn btn-yellow btn-sm">View all</a>
+                    <a href="<?php echo '?vendor_category='.trim($cat).'&type=vendor'?>"class="common-btn btn-yellow btn-sm">View all</a>
                 </div>
 
                 <div class="swiper mySwiper">
