@@ -1,11 +1,10 @@
 <?php
 if (function_exists('register_sidebar')) {
     register_sidebar(array(
-
         'name' => 'Footer column 1',
         'id' => 'footer-column-1',
         'description' => 'Content of First footer Widget',
-        'before_widget' => '<div>',
+        'before_widget' => '<div >',
         'after_widget' => '</div>',
         'before_title' => '<h2>',
         'after_title' => '</h2>',
@@ -20,6 +19,7 @@ if (function_exists('register_sidebar')) {
         'before_title' => '<h2>',
         'after_title' => '</h2>',
     ));
+    
       register_sidebar(array(
         'name' => 'Footer column 3',
         'id' => 'footer-column-3',
@@ -29,6 +29,7 @@ if (function_exists('register_sidebar')) {
         'before_title' => '<h2>',
         'after_title' => '</h2>',
     ));
+
     register_sidebar(array(
         'name' => 'Footer column 4',
         'id' => 'footer-column-4',
