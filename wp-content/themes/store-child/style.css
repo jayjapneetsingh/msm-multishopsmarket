@@ -117,11 +117,11 @@ nav ul li:not(:first-child) {
 .btn-menu li {
     display: inline-block;
 }
-.nav-menu .btn-menu .btn-black a {
+nav .common-btn a {
     font-size: 18px;
     color: #fff;
 }
-.nav-menu .btn-menu .btn-black a:hover {
+nav .common-btn  a:hover {
     color: #000;
 }
 .search-bar {
