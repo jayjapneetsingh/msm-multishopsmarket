@@ -74,8 +74,8 @@
                           <!-- This is a second nav menu called as Login menu -->
                           <?php $login_menu = array(
                               'theme_location'  => 'login_menus',
-                              'menu_class' => 'btn-menu m-0',
-                              'a_class' => 'common-btn  mb-3 mb-sm-0 ',
+                              'menu_class' => 'btn-menu',
+                              'a_class' => 'common-btn',
                               'active_class' => 'active',
                           );
                           wp_nav_menu($login_menu);
