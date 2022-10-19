@@ -32,9 +32,9 @@
               <a class="brand-logo" href="<?php echo esc_url(home_url('/')) ;?>"><img src="<?php echo $image[0];?>" alt="msm-logo"></a>
 
               <form id="search-form" action="/" method="get" class="d-none d-sm-block d-lg-none">
-                  <input class="form-control me-2" type="search" name="s" placeholder="Search products and shops"
+                  <input class="form-control me-2"  value="<?php the_search_query(); ?>" type="search" name="s" placeholder="Search products and shops"
                          aria-label="Search">
-                  <a id="search-form-submit" onclick="searchsubmit(); return false;" href="#" ><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/Icon-search.svg" alt="search-logo&quot;"></a>
+                  <a id="search-form-submit" onclick="searchsubmit(); return false;" href="#" ><img src="<?php  get_stylesheet_directory_uri() ?>/assets/img/Icon-search.svg" alt="search-logo&quot;"></a>
               </form>
 
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -65,7 +65,7 @@
                           <div class="form-group">
                               <input class="form-control me-2" type="search" name="s" placeholder="Search products and shops"
                                      value="<?php the_search_query(); ?>" />
-                              <a href="#"  id="search-form-submit"><img src=""<?php echo get_stylesheet_directory_uri(); ?>/assets/img/Icon-search.svg" alt="search-logo&quot;"></a>
+                              <a href="#"  id="search-form-submit"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/Icon-search.svg" alt="search-logo&quot;"></a>
                           </div>
                       </form>
                       <!-- Search bar end  -->
