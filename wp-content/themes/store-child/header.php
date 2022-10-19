@@ -32,9 +32,11 @@
               <a class="brand-logo" href="<?php echo esc_url(home_url('/')) ;?>"><img src="<?php echo $image[0];?>" alt="msm-logo"></a>
 
               <form id="search-form" action="/" method="get" class="d-none d-sm-block d-lg-none">
-                  <input class="form-control me-2"  value="<?php the_search_query(); ?>" type="search" name="s" placeholder="Search products and shops"
-                         aria-label="Search">
-                  <a id="search-form-submit" onclick="searchsubmit(); return false;" href="#" ><img src="<?php  get_stylesheet_directory_uri() ?>/assets/img/Icon-search.svg" alt="search-logo&quot;"></a>
+              <div class="form-group position-relative">
+                              <input class="form-control me-2" type="search" name="s" placeholder="Search products and shops"
+                                     value="<?php the_search_query(); ?>" />
+                              <button href="#"  id="search-form-submit"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/Icon-search.svg" alt="search-logo&quot;"></button>
+                          </div>
               </form>
 
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -62,15 +64,15 @@
 
                       <!-- Search Bar -->
                       <form id="search-form" action="/" method="get" class="d-flex me-auto my-3 my-lg-0 d-block d-sm-none d-lg-block order-1 order-lg-0">
-                          <div class="form-group">
+                          <div class="form-group position-relative">
                               <input class="form-control me-2" type="search" name="s" placeholder="Search products and shops"
                                      value="<?php the_search_query(); ?>" />
-                              <a href="#"  id="search-form-submit"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/Icon-search.svg" alt="search-logo&quot;"></a>
+                              <button href="#"  id="search-form-submit"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/Icon-search.svg" alt="search-logo&quot;"></button>
                           </div>
                       </form>
                       <!-- Search bar end  -->
 
-                      <div class="btn-group align-items-start align-items-sm-center flex-column flex-sm-row order-3 order-lg-0">
+                      <div class="btn-group  flex-column flex-sm-row order-3 order-lg-0">
                           <!-- This is a second nav menu called as Login menu -->
                           <?php $login_menu = array(
                               'theme_location'  => 'login_menus',
