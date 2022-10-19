@@ -31,12 +31,7 @@
           <div class="container-fluid custom-container">
               <a class="brand-logo" href="<?php echo esc_url(home_url('/')) ;?>"><img src="<?php echo $image[0];?>" alt="msm-logo"></a>
 
-              <form id="search-form" action="/" method="get" class="d-none d-sm-block d-lg-none">
-                  <input class="form-control me-2" type="search" name="s" placeholder="Search products and shops"
-                         aria-label="Search">
-                  <a id="search-form-submit" onclick="searchsubmit(); return false;" href="#" ><img src="/wp-content/themes/msm/assets/img/Icon-search.svg" alt="search-logo&quot;"></a>
-              </form>
-
+             
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                       data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
                       aria-label="Toggle navigation">
@@ -65,7 +60,7 @@
                           <div class="form-group">
                               <input class="form-control me-2" type="search" name="s" placeholder="Search products and shops"
                                      value="<?php the_search_query(); ?>" />
-                              <a href="#"  id="search-form-submit"><img src="/wp-content/themes/msm/assets/img/Icon-search.svg" alt="search-logo&quot;"></a>
+                              <a href="#"  id="search-form-submit"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/Icon-search.svg" alt="search-logo&quot;"></a>
                           </div>
                       </form>
                       <!-- Search bar end  -->
@@ -75,7 +70,7 @@
                           <?php $login_menu = array(
                               'theme_location'  => 'login_menus',
                               'menu_class' => 'btn-menu m-0',
-                              'a_class' => 'common-btn btn-red mb-3 mb-sm-0 ',
+                              'a_class' => 'common-btn mb-3 mb-sm-0 ',
                               'active_class' => 'active',
                           );
                           wp_nav_menu($login_menu);
