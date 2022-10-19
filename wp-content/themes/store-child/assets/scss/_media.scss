@@ -1,7 +1,7 @@
 @media (min-width: 1400px) {
     header {
         nav {
-            .btn-group {
+            .btn-menu {
                 .common-btn {
                     &:not(:first-child) {
                         margin-left: 2.75rem !important;
@@ -12,7 +12,17 @@
     }
 }
 
-// @media (max-width: 575.98px) { ... }
+@media (max-width: 575.98px) { 
+header{
+    nav{
+    .btn-menu{
+        li{
+            margin-bottom: 1rem;
+            margin-left: 0 !important;
+        }
+    }
+}}
+}
 
 // @media (max-width: 767.98px) { ... }
 
@@ -38,10 +48,9 @@
             padding-bottom: 2.0625rem !important;
 
             .footer-item {
-                // h3 {
-                //     margin-top: 1.75rem;
-                //     margin-bottom: 1.75rem;
-                // }
+                h2 {
+                    margin-bottom: 1rem; 
+                }
 
                 ul {
                     li {
