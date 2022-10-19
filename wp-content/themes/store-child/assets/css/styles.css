@@ -8386,19 +8386,15 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important; } }
 
-body, h1, .h1, h2, .h2, h3, .h3, h4, .h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
+* {
   margin: 0; }
 
 body {
   font-family: 'Poppins', 'sans-serif';
   line-height: 1.5;
   color: #000;
-  background: #fff; }
+  background: #fff;
+  -webkit-font-smoothing: antialiased; }
 
 /*==== Font-size css =====*/
 h1, .h1 {
@@ -8446,7 +8442,7 @@ h4, .h4,
     color: #fff;
     background: #c9800a; }
 
-.btn-sm, .btn-group-sm > .btn {
+.btn-viewall {
   padding: 0.6875rem 1.625rem !important; }
 
 .btn-red {
@@ -8568,21 +8564,29 @@ a {
     font-size: 1rem; }
 
 .card {
-  border: 1px solid #F7463F;
-  border-radius: 10px;
-  transition: all 0.3s ease; }
+  border-radius: 10px !important;
+  transition: all 0.3s ease;
+  cursor: pointer; }
+  .card .card-img {
+    max-height: 262px; }
   .card .card-body {
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     background: #fff;
     color: #000;
-    transition: all 0.3s ease;
-    border-radius: 0px 0px 10px 10px; }
+    border-radius: 0px 0px 10px 10px;
+    border: 1px solid #F7463F !important;
+    border-top: 1px solid transparent !important;
+    transition: all 400ms ease-in-out; }
     .card .card-body:hover {
       background: #000;
       color: #fff; }
+    .card .card-body h4, .card .card-body .h4 {
+      font-size: 1rem;
+      margin-bottom: 2px; }
     .card .card-body p {
-      font-size: 0.875rem; }
+      font-size: 0.875rem;
+      margin: 0; }
 
 /*==== End =====*/
 /*==== Header css =====*/
@@ -8642,22 +8646,6 @@ header form {
 header .btn-menu li {
   display: inline-block; }
 
-header .btn-menu .menu-item-48 a {
-  background: #F59E13;
-  color: #fff;
-  padding: 0.6875rem 2.5rem; }
-  header .btn-menu .menu-item-48 a:hover {
-    color: #fff;
-    background: #c9800a; }
-
-header .btn-menu .menu-item-49 a {
-  background: #F7463F;
-  color: #fff;
-  padding: 0.6875rem 2.625rem; }
-  header .btn-menu .menu-item-49 a:hover {
-    color: #fff;
-    background: #c21812; }
-
 /*==== END =====*/
 /*==== main css =====*/
 /*==== hero-banner css =====*/
@@ -8673,14 +8661,20 @@ header .btn-menu .menu-item-49 a {
         inset: 0;
         z-index: 0;
         background: transparent linear-gradient(120deg, #000000DB 0%, #00000094 100%) 0% 0% no-repeat; }
+      .herobanner-section #herobanner-slider .carousel-inner .carousel-item .carousel-img {
+        object-fit: cover;
+        object-position: center;
+        max-height: 1080px; }
     .herobanner-section #herobanner-slider .carousel-caption {
       z-index: 3;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%) !important; }
+      transform: translate(-50%, -50%) !important;
+      height: fit-content; }
       .herobanner-section #herobanner-slider .carousel-caption > :not(:last-child) {
         margin-bottom: 1.125rem; }
-      .herobanner-section #herobanner-slider .carousel-caption h1, .herobanner-section #herobanner-slider .carousel-caption .h1, .herobanner-section #herobanner-slider .carousel-caption p {
+      .herobanner-section #herobanner-slider .carousel-caption h1, .herobanner-section #herobanner-slider .carousel-caption .h1,
+      .herobanner-section #herobanner-slider .carousel-caption p {
         color: #fff; }
       .herobanner-section #herobanner-slider .carousel-caption h2, .herobanner-section #herobanner-slider .carousel-caption .h2 {
         color: #F59E13;

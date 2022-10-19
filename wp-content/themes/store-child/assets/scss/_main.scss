@@ -18,6 +18,14 @@
                 background: transparent linear-gradient(120deg, #000000DB 0%, #00000094 100%) 0% 0% no-repeat;
             }
 
+            .carousel-item {
+                .carousel-img {
+                    object-fit: cover;
+                    object-position: center;
+                    max-height: 1080px;
+                }
+            }
+
         }
 
         .carousel-caption {
@@ -25,12 +33,14 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%) !important;
+            height: fit-content;
 
             &> :not(:last-child) {
                 margin-bottom: 1.125rem;
             }
 
-            h1,p {
+            h1,
+            p {
                 color: $white;
             }
 

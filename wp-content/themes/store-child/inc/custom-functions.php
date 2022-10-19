@@ -74,3 +74,18 @@ function pr($args,$args2 = false){
         die;
     }
 }
+
+
+
+/*
+ This code is used for search only products 
+ */
+
+add_filter( 'pre_get_posts', 'tgm_io_cpt_search' );
+function tgm_io_cpt_search( $query ) {
+    if ( $query->is_search ) {
+        $query->set( 'post_type', array( 'product') );
+    }
+    return $query;
+}
+
