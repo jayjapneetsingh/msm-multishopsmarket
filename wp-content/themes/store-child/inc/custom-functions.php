@@ -3,12 +3,12 @@
 add_action( 'wp_enqueue_scripts', 'swiper_js_enquee' );
 function swiper_js_enquee() {
 
-    wp_enqueue_style('swiper-css',"https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css");
-    wp_enqueue_style('swiper-csssw',"/wp-content/themes/store-child/assets/css/styles.css");
+    wp_enqueue_style('swiper-css',"//cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css");
+    wp_enqueue_style('swiper-csssw',get_stylesheet_directory_uri()."/assets/css/styles.css");
 
-    wp_enqueue_script('bootstrap-js',"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js",array('jquery'),false);
-    wp_enqueue_script('custom-swiper-js','https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js',array(),false,true);
-    wp_enqueue_script('d-custom-script-js','/wp-content/themes/store-child/assets/js/script.js',array(),false,true);
+    wp_enqueue_script('bootstrap-js',"//cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js",array('jquery'),false);
+    wp_enqueue_script('custom-swiper-js','//cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js',array(),false,true);
+    wp_enqueue_script('d-custom-script-js',get_stylesheet_directory_uri().'/assets/js/script.js',array(),false,true);
 
 
 }
@@ -74,3 +74,18 @@ function pr($args,$args2 = false){
         die;
     }
 }
+
+
+
+/*
+ This code is used for search only products 
+ */
+
+add_filter( 'pre_get_posts', 'tgm_io_cpt_search' );
+function tgm_io_cpt_search( $query ) {
+    if ( $query->is_search ) {
+        $query->set( 'post_type', array( 'product') );
+    }
+    return $query;
+}
+

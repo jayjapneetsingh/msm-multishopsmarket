@@ -3,6 +3,7 @@
 .herobanner-section {
     position: relative;
 
+
     #herobanner-slider {
         min-height: 1080px;
 
@@ -13,32 +14,60 @@
                 content: '';
                 position: absolute;
                 inset: 0;
-                z-index: 1;
+                z-index: 0;
                 background: transparent linear-gradient(120deg, #000000DB 0%, #00000094 100%) 0% 0% no-repeat;
+                pointer-events: none;
             }
-        }
-    }
 
-    .hero-content {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 3;
+            .carousel-item {
+                a {
+                    display: block !important;
+                }
 
-        &> :not(:last-child) {
-            margin-bottom: 1.125rem;
-        }
+                .carousel-img {
+                    object-fit: cover;
+                    object-position: center;
+                    max-height: 1080px;
+                }
+            }
 
-        h1,
-        p {
-            color: $white;
         }
 
-        h2 {
-            color: $yellow;
-            font-size: $medium;
+        .carousel-control-next,
+        .carousel-control-prev {
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15%;
+            height: fit-content;
+
+        }
+
+        .carousel-caption {
+            z-index: 3;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) !important;
+            height: fit-content;
+
+            &> :not(:last-child) {
+                margin-bottom: 1.125rem;
+            }
+
+            h1,
+            p {
+                color: $white;
+            }
+
+            h2 {
+                color: $yellow;
+                font-size: $medium;
+            }
+
+            p {
+                max-width: 1100px;
+                margin-left: auto;
+                margin-right: auto;
+            }
         }
     }
 

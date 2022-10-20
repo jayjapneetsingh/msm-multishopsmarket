@@ -1,3 +1,4 @@
+
 /*==== hero-banner css =====*/
 footer {
     background: #FCCB7E 0% 0% no-repeat;
@@ -9,30 +10,43 @@ footer {
         .brand-footer {
             max-width: 22.5625rem;
 
+            img {
+                height: 62px;
+                -o-object-fit: contain;
+                   object-fit: contain;
+                width: auto;
+            }
+
             p {
                 font-size: $small;
                 font-weight: 300;
             }
         }
 
-
-        h3 {
-            font-size: $small;
-            font-weight: 500;
-        }
-
+            h2 {
+                font-size: $small;
+                font-weight: 500;
+                margin-bottom: 1.5rem;
+                margin-top: 1rem;
+            }
+        
         ul {
             li {
+                font-weight: 300;
+
                 &:not(:last-child) {
                     margin-bottom: 1.125rem;
                 }
             }
 
+
             a {
                 font-size: $small;
                 color: $black;
-                font-weight: 300;
+                font-weight: 300 !important;
+                cursor: pointer;
             }
+
         }
     }
 
