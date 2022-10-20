@@ -1,6 +1,6 @@
 * {
     margin: 0;
-  }
+}
 
 body {
     font-family: 'Poppins', 'sans-serif';
@@ -145,6 +145,12 @@ a {
             color: $black !important;
         }
     }
+    form {
+        input[type='search'] {
+            color: $black !important;
+        
+        }
+    }
 
     .navbar-toggler {
         span {
@@ -241,11 +247,28 @@ a {
 
 .card {
     border-radius: 10px !important;
-    transition: all 0.3s ease;
     cursor: pointer;
+
+    &:hover {
+        .card-img {
+            img {
+                transform: scale(1.2);
+            }
+        }
+
+        .card-body {
+            background: $black;
+            color: $white;
+        }
+    }
 
     .card-img {
         max-height: 262px;
+        overflow: hidden;
+
+        img {
+            transition: all 400ms ease;
+        }
     }
 
     .card-body {
@@ -256,12 +279,7 @@ a {
         border-radius: 0px 0px 10px 10px;
         border: 1px solid $red !important;
         border-top: 1px solid transparent !important;
-        transition: all 400ms ease-in-out;
-
-        &:hover {
-            background: $black;
-            color: $white;
-        }
+        transition: all 400ms ease;
 
         h4 {
             font-size: $small;
