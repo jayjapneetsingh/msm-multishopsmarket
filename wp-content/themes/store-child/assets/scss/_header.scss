@@ -85,39 +85,36 @@ header {
     .btn-menu {
         li {
             display: inline-block;
-        }
-    }
 
-    .btn-menu {
-        .menu-item-48 {
-            a {
-                background: $yellow;
-                color: $white;
-                padding: 0.6875rem 2.5rem;
-
-                &:hover {
+            &:first-child {
+                a {
+                    background: $yellow;
                     color: $white;
-                    background: $yellow-700;
+                    padding: 0.6875rem 2.5rem;
+
+                    &:hover {
+                        color: $white;
+                        background: $yellow-700;
+                    }
                 }
             }
 
-        }
-
-        .menu-item-49 {
-            a {
-                background: $red;
-                color: $white;
-                padding: 0.6875rem 2.625rem;
-
-                &:hover {
+            &:last-child {
+                a {
+                    background: $red;
                     color: $white;
-                    background: $red-700;
+                    padding: 0.6875rem 2.625rem;
+
+                    &:hover {
+                        color: $white;
+                        background: $red-700;
+                    }
                 }
             }
-
         }
-    }
 
+
+    }
 
 }
 
