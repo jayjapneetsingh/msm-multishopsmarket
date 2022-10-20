@@ -8498,7 +8498,8 @@ a {
   .nav-bg ul a {
     color: #000 !important; }
   .nav-bg form input[type='search'] {
-    color: #000 !important; }
+    color: #000 !important;
+    border-color: #000; }
   .nav-bg .navbar-toggler span {
     background: black; }
     .nav-bg .navbar-toggler span::after {
@@ -8528,7 +8529,7 @@ a {
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  /* Center slide text vertically */
+  background: transparent;
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -8540,7 +8541,9 @@ a {
   -webkit-box-align: center;
   -ms-flex-align: center;
   -webkit-align-items: center;
-  align-items: center; }
+  align-items: center;
+  padding-left: 18px;
+  padding-right: 18px; }
 
 .swiper-slide img {
   display: block;
@@ -8567,16 +8570,22 @@ a {
 
 .card {
   border-radius: 10px !important;
-  cursor: pointer; }
+  cursor: pointer;
+  width: 100%; }
   .card:hover .card-img img {
     transform: scale(1.2); }
   .card:hover .card-body {
     background: #000;
     color: #fff; }
+  .card a {
+    cursor: pointer;
+    display: block; }
   .card .card-img {
     max-height: 262px;
-    overflow: hidden; }
+    overflow: hidden;
+    border-bottom: 0; }
     .card .card-img img {
+      aspect-ratio: 1/1;
       transition: all 400ms ease; }
   .card .card-body {
     padding-top: 20px;
@@ -8596,6 +8605,9 @@ a {
 
 /*==== End =====*/
 /*==== Header css =====*/
+header nav {
+  background: #00000080; }
+
 header .brand-logo {
   display: inline-block; }
   header .brand-logo img {
@@ -8680,11 +8692,20 @@ header .btn-menu li {
         position: absolute;
         inset: 0;
         z-index: 0;
-        background: transparent linear-gradient(120deg, #000000DB 0%, #00000094 100%) 0% 0% no-repeat; }
+        background: transparent linear-gradient(120deg, #000000DB 0%, #00000094 100%) 0% 0% no-repeat;
+        pointer-events: none; }
+      .herobanner-section #herobanner-slider .carousel-inner .carousel-item a {
+        display: block !important; }
       .herobanner-section #herobanner-slider .carousel-inner .carousel-item .carousel-img {
         object-fit: cover;
         object-position: center;
         max-height: 1080px; }
+    .herobanner-section #herobanner-slider .carousel-control-next,
+    .herobanner-section #herobanner-slider .carousel-control-prev {
+      top: 50%;
+      transform: translateY(-50%);
+      width: 15%;
+      height: fit-content; }
     .herobanner-section #herobanner-slider .carousel-caption {
       z-index: 3;
       top: 50%;
@@ -8699,6 +8720,10 @@ header .btn-menu li {
       .herobanner-section #herobanner-slider .carousel-caption h2, .herobanner-section #herobanner-slider .carousel-caption .h2 {
         color: #F59E13;
         font-size: 1.875rem; }
+      .herobanner-section #herobanner-slider .carousel-caption p {
+        max-width: 1100px;
+        margin-left: auto;
+        margin-right: auto; }
 
 /*==== END =====*/
 /*==== categories-section css =====*/
@@ -8721,6 +8746,7 @@ footer {
       max-width: 22.5625rem; }
       footer .footer-container .brand-footer img {
         height: 62px;
+        -o-object-fit: contain;
         object-fit: contain;
         width: auto; }
       footer .footer-container .brand-footer p {
@@ -8754,6 +8780,8 @@ footer {
     margin-left: 2.75rem !important; } }
 
 @media (max-width: 575.98px) {
+  h1, .h1 {
+    font-size: 2rem !important; }
   header nav .btn-menu li {
     margin-bottom: 1rem;
     margin-left: 0 !important; } }
@@ -8811,6 +8839,8 @@ footer {
         transition: all 0.3s ease; } }
 
 @media (max-width: 1399px) {
+  h1, .h1 {
+    font-size: 3rem; }
   header .brand-logo img {
     height: 42px; }
   header ul .nav-item {

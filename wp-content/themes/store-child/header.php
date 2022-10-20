@@ -33,7 +33,7 @@
 
               <form id="search-form" action="/" method="get" class="d-none d-sm-block d-lg-none">
               <div class="form-group position-relative">
-                              <input class="form-control me-2" type="search" name="s" placeholder="Search products and shops"
+                              <input class="form-control me-2" type="search" name="s" placeholder="Search products"
                                      value="<?php the_search_query(); ?>" />
                               <button href="#"  id="search-form-submit"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/Icon-search.svg" alt="search-logo&quot;"></button>
                           </div>
@@ -65,23 +65,29 @@
                       <!-- Search Bar -->
                       <form id="search-form" action="/" method="get" class="d-flex me-auto my-3 my-lg-0 d-block d-sm-none d-lg-block order-1 order-lg-0">
                           <div class="form-group position-relative">
-                              <input class="form-control me-2" type="search" name="s" placeholder="Search products and shops"
+                              <input class="form-control me-2" type="search" name="s" placeholder="Search products"
                                      value="<?php the_search_query(); ?>" />
                               <button href="#"  id="search-form-submit"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/Icon-search.svg" alt="search-logo&quot;"></button>
                           </div>
                       </form>
                       <!-- Search bar end  -->
 
-                      <div class="btn-group  flex-column flex-sm-row order-3 order-lg-0">
+                      <?php if(!is_user_logged_in( )) { ?>
+                        <div class="btn-group flex-column flex-sm-row order-3 order-lg-0">
                           <!-- This is a second nav menu called as Login menu -->
-                          <?php $login_menu = array(
-                              'theme_location'  => 'login_menus',
-                              'menu_class' => 'btn-menu',
-                              'a_class' => 'common-btn',
-                              'active_class' => 'active',
-                          );
-                          wp_nav_menu($login_menu);
+                          <?php $login_menu =
+                           array( 'theme_location' => 'login_menus',
+                                  'menu_class' => 'btn-menu',
+                                  'a_class' => 'common-btn',
+                                   'active_class' => 'active',
+                                );
+                                wp_nav_menu($login_menu);
                           ?>
+                        </div> <?php }
+                                  else{?>
+                                    <a class="common-btn btn-red"
+                                     href="<?php echo wp_logout_url( home_url() ); ?>">Logout</a>
+                                <?php } ?>
                       </div>
                   </div>
               </div>

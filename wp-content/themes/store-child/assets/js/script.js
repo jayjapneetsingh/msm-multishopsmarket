@@ -5,7 +5,7 @@ window.onscroll = function () {
 function myFunction() {
     if (document.documentElement.scrollTop > 150) {
         document.querySelector("nav").classList.add("nav-bg");
-    }else{
+    } else {
         document.querySelector("nav").classList.remove("nav-bg");
     }
 }
@@ -34,12 +34,11 @@ const swiper = new Swiper('.mySwiper', {
             slidesPerView: 2,
             spaceBetween: 20
         },
-        // when window width is >= 640px
-        768: {
+        992: {
             slidesPerView: 3,
-            spaceBetween: 30
+            spaceBetween: 40
         },
-        992:{
+        1199: {
             slidesPerView: 4,
             spaceBetween: 40
         }
@@ -49,5 +48,3 @@ const swiper = new Swiper('.mySwiper', {
         prevEl: ".swiper-button-prev",
     }
 })
-
-

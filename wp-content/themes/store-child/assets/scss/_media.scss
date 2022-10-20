@@ -10,18 +10,33 @@
             }
         }
     }
+
+    // .herobanner-section {
+    //     #herobanner-slider {
+    //     .carousel-caption {
+    //         h1 {
+    //             font-size: 3rem;
+    //         }
+    //     }
+    // }
+    // }
 }
 
-@media (max-width: 575.98px) { 
-header{
-    nav{
-    .btn-menu{
-        li{
-            margin-bottom: 1rem;
-            margin-left: 0 !important;
+@media (max-width: 575.98px) {
+    h1 {
+        font-size: 2rem !important;
+    }
+
+    header {
+        nav {
+            .btn-menu {
+                li {
+                    margin-bottom: 1rem;
+                    margin-left: 0 !important;
+                }
+            }
         }
     }
-}}
 }
 
 // @media (max-width: 767.98px) { ... }
@@ -32,15 +47,16 @@ header{
     .header-bg {
         background: $black-02;
     }
-        header {
-            nav {
-                form {
-                    max-width: 20rem !important;
-                }
+
+    header {
+        nav {
+            form {
+                max-width: 20rem !important;
             }
         }
+    }
 
-    
+
 
     footer {
         .footer-container {
@@ -49,7 +65,7 @@ header{
 
             .footer-item {
                 h2 {
-                    margin-bottom: 1rem; 
+                    margin-bottom: 1rem;
                 }
 
                 ul {
@@ -78,6 +94,7 @@ header{
 
 
 @media (max-width: 1199px) {
+
     header {
         nav {
             form {
@@ -140,6 +157,10 @@ header{
 }
 
 @media (max-width: 1399px) {
+    h1 {
+        font-size: 3rem;
+    }
+
     header {
         .brand-logo {
             img {
