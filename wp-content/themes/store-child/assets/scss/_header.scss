@@ -1,5 +1,9 @@
 /*==== Header css =====*/
 header {
+    nav {
+        background: $black-02;
+    }
+
     .brand-logo {
         display: inline-block;
 
@@ -34,7 +38,6 @@ header {
 
             }
         }
-
 
     }
 
