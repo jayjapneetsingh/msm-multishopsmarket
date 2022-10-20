@@ -8,25 +8,26 @@ footer {
 
         .brand-footer {
             max-width: 22.5625rem;
-   
+
             img {
                 height: 62px;
                 object-fit: contain;
-                width:auto;
+                width: auto;
             }
+
             p {
                 font-size: $small;
                 font-weight: 300;
             }
         }
 
-        h2 {
-            font-size: $small;
-            font-weight: 500;
-            margin-bottom: 1.5rem;
-            margin-top: 1rem;
-        }
-
+            h2 {
+                font-size: $small;
+                font-weight: 500;
+                margin-bottom: 1.5rem;
+                margin-top: 1rem;
+            }
+        
         ul {
             li {
                 font-weight: 300;
@@ -35,13 +36,14 @@ footer {
                     margin-bottom: 1.125rem;
                 }
             }
+
             a {
                 font-size: $small;
                 color: $black;
                 font-weight: 300 !important;
                 cursor: pointer;
             }
-           
+
         }
     }
 
