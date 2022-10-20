@@ -1,3 +1,4 @@
+
 /*==== hero-banner css =====*/
 footer {
     background: #FCCB7E 0% 0% no-repeat;
@@ -11,7 +12,8 @@ footer {
 
             img {
                 height: 62px;
-                object-fit: contain;
+                -o-object-fit: contain;
+                   object-fit: contain;
                 width: auto;
             }
 
@@ -36,6 +38,7 @@ footer {
                     margin-bottom: 1.125rem;
                 }
             }
+
 
             a {
                 font-size: $small;
