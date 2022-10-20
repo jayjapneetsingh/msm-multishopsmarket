@@ -1,0 +1,306 @@
+* {
+  margin: 0;
+}
+
+body {
+  font-family: 'Poppins', 'sans-serif';
+  line-height: 1.5;
+  color: #000;
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*==== Font-size css =====*/
+h1 {
+  font-size: 70px;
+  font-weight: 700;
+}
+
+h2,
+.h2 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+h3,
+.h3 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+h4,
+.h4 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/*==== End =====*/
+
+
+/*==== button css =====*/
+.common-btn {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  font-size: 1rem;
+  border-radius: 10px;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn-yellow {
+  background: $yellow;
+  color: $white;
+  padding: 0.6875rem 2.5rem;
+
+  &:hover {
+    color: $white;
+    background: $yellow-700;
+  }
+}
+
+.btn-viewall {
+  padding: 0.6875rem 1.625rem !important;
+}
+
+.btn-red {
+  background: $red;
+  color: $white;
+  padding: 0.6875rem 2.625rem;
+
+  &:hover {
+    color: $white;
+    background: $red-700;
+  }
+}
+
+/*==== End =====*/
+/*==== button css =====*/
+.custom-container {
+  max-width: 1680px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+main {
+  min-height: calc(100vh - 78px);
+}
+
+ol,
+ul {
+  list-style: none;
+  padding: 0 !important;
+  margin: 0 !important;
+
+}
+
+a {
+  text-decoration: none !important;
+  display: inline-block !important;
+  color: $white;
+}
+
+
+.navbar_toggler {
+  span {
+    background: transparent !important;
+
+    &::before {
+      transform: translate(0, 0px) rotate(-45deg) !important;
+    }
+
+    &::after {
+      transform: translate(0, 0px) rotate(45deg) !important;
+    }
+  }
+}
+
+
+.nav-bg {
+  transition: all 300ms ease;
+
+  &::before {
+    content: '';
+    background: white;
+    position: absolute;
+    transition: all ease-in-out .1s;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  ul {
+    a {
+      color: $black !important;
+    }
+  }
+
+  form {
+    input[type='search'] {
+      color: $black !important;
+      border-color: $black;
+
+    }
+  }
+
+  .navbar-toggler {
+    span {
+      background: black;
+
+      &::after {
+        background: black;
+      }
+
+      &::before {
+        background: black;
+      }
+
+    }
+  }
+
+}
+
+
+.carousel-control-prev,
+.carousel-control-next {
+
+  &:hover {
+    color: initial !important;
+  }
+}
+
+.carousel-control-prev-icon {
+  background-image: url(../img/left-arrow.svg);
+  object-fit: contain;
+}
+
+.carousel-control-next-icon {
+  background-image: url(../img/right-arrow.svg);
+  object-fit: contain;
+}
+
+/*==== End =====*/
+
+/*==== Swiper Css =====*/
+.swiper {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 3.8125rem;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-next {
+  right: 1px;
+}
+
+.swiper-button-prev {
+  left: 5px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  background: $yellow;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+
+  &::after {
+    color: $black;
+    font-size: 1rem;
+  }
+}
+
+.card {
+  border-radius: 10px !important;
+  cursor: pointer;
+  width: 100%;
+
+  &:hover {
+    .card-img {
+      img {
+        transform: scale(1.2);
+      }
+    }
+
+    .card-body {
+      background: $black;
+      color: $white;
+    }
+  }
+
+  a {
+    cursor: pointer;
+    display: block;
+  }
+
+  .card-img {
+    max-height: 262px;
+    overflow: hidden;
+    border-bottom: 0;
+
+    img {
+      aspect-ratio: 1/1;
+      transition: all 400ms ease;
+    }
+  }
+
+  .card-body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: $white;
+    color: $black;
+    border-radius: 0px 0px 10px 10px;
+    border: 1px solid $red !important;
+    border-top: 1px solid transparent !important;
+    transition: all 400ms ease;
+
+    h4 {
+      font-size: $small;
+      margin-bottom: 2px;
+    }
+
+    p {
+      font-size: 0.875rem;
+      margin: 0;
+    }
+  }
+}
+
+/*==== End =====*/

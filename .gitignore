@@ -3,7 +3,7 @@
 
 # phpstorm, webstorm
 .idea/
-
+.vscode/
 
 # sublime and other ide
 .project
