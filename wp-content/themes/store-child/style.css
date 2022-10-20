@@ -11,5 +11,27 @@
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
  Text Domain:  MSM
 */
+.herobanner-section #herobanner-slider .carousel-control-next, .herobanner-section #herobanner-slider .carousel-control-prev{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    background: none;
+    border: 0;
+    opacity: 0.5;
+    transition: opacity 0.15s ease;
+    transform: unset;
+    height: unset;
+}
 
-   
+.herobanner-section #herobanner-slider .carousel-img{
+  max-height: 1080px;
+  overflow: hidden;
+}

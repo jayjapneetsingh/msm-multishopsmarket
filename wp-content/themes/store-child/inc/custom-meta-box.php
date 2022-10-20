@@ -23,7 +23,7 @@ function add_custom_meta_box_hero_slider()
     $pageTemplate = get_post_meta($post->ID, '_wp_page_template', true);
 
     if ($pageTemplate == 'front-page.php') {
-        add_meta_box('vendor-shops', 'Vendor shops Slider', 'show_vendor_shops', 'page');
+        add_meta_box('vendor-shops', 'Hero Banner Shops Slider', 'show_vendor_shops', 'page');
     }
 }
 add_action('add_meta_boxes', 'add_custom_meta_box_hero_slider');
@@ -31,8 +31,8 @@ add_action('add_meta_boxes', 'add_custom_meta_box_hero_slider');
 
 $vendor_shops_meta_fields = array(
     array(
-        'label' => 'Vendors Shops',
-        'desc' => 'Select the vendors shops',
+        'label' => 'For windows: Hold down the control (ctrl) button to select multiple options
+        <br>For Mac: Hold down the command button to select multiple options',
         'id' => 'vendor-shop',
         'type' => 'multiselect',
         'multiple' => true,
@@ -123,8 +123,8 @@ add_action('add_meta_boxes', 'add_custom_meta_box');
 
 $vendor_cat_meta_fields = array(
     array(
-        'label' => 'Vendor Categories',
-        'desc' => 'Select the vendor category',
+        'label' => 'For windows: Hold down the control (ctrl) button to select multiple options
+        <br>For Mac: Hold down the command button to select multiple options',
         'id' => 'vendor-cat',
         'type' => 'multiselect',
         'multiple' => true,

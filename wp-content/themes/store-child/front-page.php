@@ -33,19 +33,28 @@ $shops = $meta_shops[0];
                     $url =  $shop->get_shop_url();
                     $banner = $shop->get_banner();
                     $shop_name = $shop->get_shop_name();
-                    $shop_discription = $shop->get_shop_description();
+                    $shop_description = $shop->get_shop_description();
+                   
                 ?>
                     <div class="carousel-item <?php echo $i == 0 ? 'active' : '' ?>
                  ">
                         <a href="<?php echo $url; ?>">
                             <div class="carousal-img">
+                                <?php if (empty($banner)) { ?>
+                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/dummy.jpeg; ?>" class="d-block w-100" alt="hero-banner">
+                                <?php } ?>
                                 <img src="<?php echo $banner; ?>" class="d-block w-100" alt="hero-banner">
                             </div>
                             <div class="carousel-caption d-block custom-container w-100">
                                 <h1> Multishops Market</h1>
                                 <h2><?php echo $shop_name; ?></h2>
-
-                                <?php echo $shop_discription; ?>
+                                <?php 
+                                if(empty($shop_description)){
+                                     echo '<p>Multiple Shops at one place<p>';
+                                }
+                                ?>
+                                 <?php echo $shop_description;
+                               ?>
                             </div>
                         </a>
                     </div>
@@ -89,6 +98,12 @@ $shops = $meta_shops[0];
                             $city = $address['city'];
                             $banner_url = $store_user->get_list_banner();
                             $url = $store_user->get_shop_url();
+                            if (empty($address)) {
+                                $street1 = 'Haridwar';
+                                $street2 = 'Haridwar';
+                                $city = 'Haridwar';
+                            }
+
                         ?>
 
                             <!-- IRE -->
@@ -96,7 +111,10 @@ $shops = $meta_shops[0];
                                 <div class="card">
                                     <a href="<?php echo $url; ?>">
                                         <div class="card-img">
-                                            <img src="<?php echo $store_user->get_list_banner() ?>" alt="shop-profile">
+                                            <?php if (empty($banner_url)) { ?>
+                                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/dummy.jpeg; ?>" class="d-block w-100" alt="hero-banner">
+                                            <?php } ?>
+                                            <img src="<?php echo $banner_url; ?>" alt="shop-profile">
                                         </div>
                                         <div class="card-body">
                                             <h4><?php echo     $store_user->get_shop_name() ?></h4>
