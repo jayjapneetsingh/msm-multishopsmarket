@@ -17,14 +17,13 @@ function add_custom_meta_box_hero_slider()
     global $post;
     $pageTemplate = get_post_meta($post->ID, '_wp_page_template', true);
     if ($pageTemplate == 'front-page.php') {
-        add_meta_box('vendor-shops', 'Hero Banner Shops Slider', 'show_vendor_shops', 'page');
+        add_meta_box('vendor-shops', 'Hero Banner Shops Slider`<small>( Select shops to show shop banner in home page slider )</small>`', 'show_vendor_shops', 'page');
     }
 }
 add_action('add_meta_boxes', 'add_custom_meta_box_hero_slider');
 $vendor_shops_meta_fields = array(
     array(
-        'label' => 'For windows: Hold down the control (ctrl) button to select multiple options
-        <br>For Mac: Hold down the command button to select multiple options',
+        'label' => '',
         'id' => 'vendor-shop',
         'type' => 'multiselect',
         'multiple' => true,
@@ -39,7 +38,6 @@ function show_vendor_shops()
     foreach ($vendor_shops_meta_fields as $field) {
         $meta = get_post_meta($post->ID, $field['id'], true);
         echo '<tr>';
-        echo '<th><label for="' . $field['id'] . '">' . $field['label'] . '</label></th>';
         echo '<td>';
         switch ($field['type']) {
             case 'multiselect':
@@ -54,6 +52,8 @@ function show_vendor_shops()
         echo '</tr>';
     }
     echo '</table>';
+    echo "<small>For windows: Hold down the control (ctrl) button to select multiple options
+    <br>For Mac: Hold down the command button to select multiple options</small>";
 }
 function save_custom_meta_hero_slider($post_id)
 {
@@ -94,14 +94,13 @@ function add_custom_meta_box()
     global $post;
     $pageTemplate = get_post_meta($post->ID, '_wp_page_template', true);
     if ($pageTemplate == 'front-page.php') {
-        add_meta_box('vendor-category', 'Vendor Categories Slider', 'show_vendor_categories', 'page');
+        add_meta_box('vendor-category', 'Vendor Categories Slider`<small>( Select Categories to show shop in home page )</small>', 'show_vendor_categories', 'page');
     }
 }
 add_action('add_meta_boxes', 'add_custom_meta_box');
 $vendor_cat_meta_fields = array(
     array(
-        'label' => 'For windows: Hold down the control (ctrl) button to select multiple options
-        <br>For Mac: Hold down the command button to select multiple options',
+        'label' => '',
         'id' => 'vendor-cat',
         'type' => 'multiselect',
         'multiple' => true,
@@ -117,7 +116,6 @@ function show_vendor_categories()
     foreach ($vendor_cat_meta_fields as $field) {
         $meta = get_post_meta($post->ID, $field['id'], true);
         echo '<tr>';
-        echo '<th><label for="' . $field['id'] . '">' . $field['label'] . '</label></th>';
         echo '<td>';
         switch ($field['type']) {
             case 'multiselect':
@@ -132,6 +130,8 @@ function show_vendor_categories()
         echo '</tr>';
     }
     echo '</table>';
+    echo "<small>For windows: Hold down the control (ctrl) button to select multiple options
+    <br>For Mac: Hold down the command button to select multiple options</small>";
 }
 function save_custom_meta($post_id)
 {
