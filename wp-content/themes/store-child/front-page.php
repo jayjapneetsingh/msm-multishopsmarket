@@ -90,6 +90,7 @@ $shops = $meta_shops[0];
                             'meta_key' => 'store-category',
                             'meta_value' => $cat,
                         ));
+                       
                         foreach ($users as $user) :
                             $store_user = wcfmmp_get_store($user->ID);
                             $address = $store_user->get_address();

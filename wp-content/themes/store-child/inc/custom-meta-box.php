@@ -31,9 +31,7 @@ add_action('add_meta_boxes', 'add_custom_meta_box_hero_slider');
 
 $vendor_shops_meta_fields = array(
     array(
-        'label' => 'For windows: Hold down the control (ctrl) button to select multiple options
-        <br>For Mac: Hold down the command button to select multiple options',
-        'id' => 'vendor-shop',
+        'label' => 'Store list slider',
         'type' => 'multiselect',
         'multiple' => true,
         'select_all_none' => true,
@@ -46,8 +44,9 @@ function show_vendor_shops()
 {
     global $vendor_shops_meta_fields, $post;
     echo '<table class="form-table">';
-    foreach ($vendor_shops_meta_fields as $field) {
-        $meta = get_post_meta($post->ID, $field['id'], true);
+foreach ($vendor_shops_meta_fields as $field) {
+    $meta = get_post_meta($post->ID, $field['id'], true);
+    if (!empty($meta)) {
         echo '<tr>';
         echo '<th><label for="' . $field['id'] . '">' . $field['label'] . '</label></th>';
         echo '<td>';
@@ -64,8 +63,14 @@ function show_vendor_shops()
         }
         echo '</td>';
         echo '</tr>';
+    }else{
+echo "It's not found";
     }
     echo '</table>';
+    echo "For windows: Hold down the control (ctrl) button to select multiple options";
+    echo '<br/>For Mac: Hold down the command button to select multiple options';
+}
+
 }
 
 
@@ -123,8 +128,7 @@ add_action('add_meta_boxes', 'add_custom_meta_box');
 
 $vendor_cat_meta_fields = array(
     array(
-        'label' => 'For windows: Hold down the control (ctrl) button to select multiple options
-        <br>For Mac: Hold down the command button to select multiple options',
+        'label' => 'Store Categories Slider',
         'id' => 'vendor-cat',
         'type' => 'multiselect',
         'multiple' => true,
@@ -159,6 +163,9 @@ function show_vendor_categories()
         echo '</tr>';
     }
     echo '</table>';
+    echo "For windows: Hold down the control (ctrl) button to select multiple options";
+    echo '<br/>For Mac: Hold down the command button to select multiple options';
+    
 }
 
 function save_custom_meta($post_id)

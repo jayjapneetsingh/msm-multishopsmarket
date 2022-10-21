@@ -66,6 +66,10 @@ function add_anchor_classes($attr,$item,$args){
 }
 add_filter('nav_menu_link_attributes', 'add_anchor_classes', 10,3);
 
+/*
+This is a Print_r Code
+*/
+
 function pr($args,$args2 = false){
     echo"<pre>";
     print_r($args);
