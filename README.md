@@ -10,11 +10,11 @@
 ### Quick setup
 * Git clone
 ```
-git clone https://git.rubico.tech/RubicoTech/braden-launchleadershipdevelopment-wordPress.git
+
 ```
 * Install [wp-cli](http://wp-cli.org/) (if not installed)
 ```
-curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+
 chmod +x wp-cli.phar
 sudo mv wp-cli.phar /usr/local/bin/wp
 wp --info
