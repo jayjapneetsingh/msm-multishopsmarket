@@ -10,7 +10,7 @@
 ### Quick setup
 * Git clone
 ```
-
+https://github.com/jayjapneetsingh/msm-multishopsmarket.git
 ```
 * Install [wp-cli](http://wp-cli.org/) (if not installed)
 ```
